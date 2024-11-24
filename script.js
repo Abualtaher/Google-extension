@@ -6,7 +6,10 @@ let myLeads = [];
 
 inputBtn.addEventListener("click", () => {
   myLeads.push(inputEl.value);
-  for (let i = 0; i < myLeads.length; i++) {
-    ulEl.innerHTML += "<li>" + myLeads[i] + "</li> ";
+  for (let i = 1; i < myLeads.length; i++) {
+    /* ulEl.innerHTML += "<li>" + myLeads[i] + "</li> "; */
+    const li = document.createElement("li");
+    li.textContent = myLeads[i];
+    ulEl.appendChild(li);
   }
 });
