@@ -3,6 +3,8 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#ul-el");
 
+localStorage.setItem();
+
 inputBtn.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
