@@ -4,7 +4,11 @@ const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#ul-el");
 
 let itemsLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
-console.log(itemsLocalStorage);
+
+if (itemsLocalStorage) {
+  myLeads = itemsLocalStorage;
+  renderLeads();
+}
 
 inputBtn.addEventListener("click", () => {
   myLeads.push(inputEl.value);
@@ -16,9 +20,9 @@ inputBtn.addEventListener("click", () => {
 function renderLeads() {
   let myList = "";
   for (let i = 0; i < myLeads.length; i++) {
-    myList = `<li>
+    myList += `<li>
       <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
       </li > `;
   }
-  ulEl.innerHTML += myList;
+  ulEl.innerHTML = myList;
 }
