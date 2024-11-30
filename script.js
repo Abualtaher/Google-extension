@@ -3,7 +3,7 @@ const inputBtn = document.querySelector("#input-btn");
 const inputEl = document.querySelector("#input-el");
 const ulEl = document.querySelector("#ul-el");
 
-let itemsLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
+const itemsLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if (itemsLocalStorage) {
   myLeads = itemsLocalStorage;
