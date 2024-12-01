@@ -8,28 +8,28 @@ const itemsLocalStorage = JSON.parse(localStorage.getItem("myLeads"));
 
 if (itemsLocalStorage) {
   myLeads = itemsLocalStorage;
-  renderLeads();
+  render(myLeads);
+}
+
+function render(leads) {
+  let myList = "";
+  for (let i = 0; i < leads.length; i++) {
+    myList += `<li>
+      <a target='_blank' href='${leads[i]}'>${leads[i]}</a>
+      </li > `;
+  }
+  ulEl.innerHTML = myList;
 }
 
 inputBtn.addEventListener("click", () => {
   myLeads.push(inputEl.value);
   inputEl.value = "";
   localStorage.setItem("myLeads", JSON.stringify(myLeads));
-  renderLeads();
+  render(myLeads);
 });
 
-deleteBtn.addEventListener("dblclick", () => {
+deleteBtn.addEventListener("click", () => {
   localStorage.clear();
   myLeads = [];
-  renderLeads();
+  render(myLeads);
 });
-
-function renderLeads() {
-  let myList = "";
-  for (let i = 0; i < myLeads.length; i++) {
-    myList += `<li>
-      <a target='_blank' href='${myLeads[i]}'>${myLeads[i]}</a>
-      </li > `;
-  }
-  ulEl.innerHTML = myList;
-}
