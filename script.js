@@ -15,7 +15,9 @@ if (itemsLocalStorage) {
 const tabs = [{ url: "https://www.linkedin.com/in/per-harald-borgen/" }];
 
 saveTab.addEventListener("click", () => {
-  console.log(tabs[0].url);
+  myLeads.push(tabs[0].url);
+  localStorage.setItem("myLeads", JSON.stringify(myLeads));
+  render(myLeads);
 });
 
 function render(leads) {
