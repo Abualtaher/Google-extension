@@ -11,8 +11,8 @@ input {
   box-sizing: border-box;
 }
 #input-btn {
-  width: 200px;
-  height: 50px;
+  max-width: 200px;
+  max-height: 50px;
   margin-top: 10px;
   padding: 10px 20px;
   background-color: #5f9341;
@@ -22,8 +22,8 @@ input {
   font-size: larger;
 }
 #delete-btn {
-  width: 200px;
-  height: 50px;
+  max-width: 200px;
+  max-height: 50px;
   margin-top: 10px;
   padding: 10px 20px;
   /* background-color: #5f9341; */
@@ -33,8 +33,8 @@ input {
   font-size: larger;
 }
 #tab-btn {
-  width: 200px;
-  height: 50px;
+  max-width: 200px;
+  max-height: 50px;
   margin-top: 10px;
   padding: 10px 20px;
   /* background-color: #5f9341; */
